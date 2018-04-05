@@ -1,4 +1,5 @@
 #include "Arduino.h"
+#include "main.h"
 
 void setup(){
 	pinMode(LED_BUILTIN, OUTPUT);
@@ -8,9 +9,17 @@ void setup(){
 }
 
 void loop(){
-	digitalWrite(LED_BUILTIN, HIGH);
+	turn_on_led();
 	delay(1000);
 
-	digitalWrite(LED_BUILTIN, LOW);
+	turn_off_led();
 	delay(500);
+}
+
+void turn_off_led(){
+	digitalWrite(LED_BUILTIN, LOW);
+}
+
+void turn_on_led(){
+	digitalWrite(LED_BUILTIN, HIGH);
 }
