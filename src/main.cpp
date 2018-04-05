@@ -9,7 +9,7 @@ void setup(){
 }
 
 void loop(){
-	digitalWrite(LED_BUILTIN, HIGH);
+	turn_on_led()
 	delay(1000);
 
 	turn_off_led();
@@ -18,4 +18,8 @@ void loop(){
 
 void turn_off_led(){
 	digitalWrite(LED_BUILTIN, LOW);
+}
+
+void turn_on_led(){
+	digitalWrite(LED_BUILTIN, HIGH);
 }
