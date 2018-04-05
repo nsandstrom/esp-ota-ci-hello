@@ -26,16 +26,18 @@
 
 language: python
 python:
-    - "2.7"
+  - "2.7"
 
 sudo: false
 cache:
-    directories:
-        - "~/.platformio"
+  directories:
+    - "~/.platformio"
 
 install:
-    - pip install -U platformio
-    - platformio update
+  - pip install -U platformio
+  - platformio update
 
 script:
-    - platformio run
+  - mkdir upload
+  - platformio run
+  - cp .pioenvs/nodemcuv2/firmware.bin upload/latest.bin
