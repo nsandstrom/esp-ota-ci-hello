@@ -11,6 +11,10 @@ void loop(){
 	digitalWrite(LED_BUILTIN, HIGH);
 	delay(1000);
 
-	digitalWrite(LED_BUILTIN, LOW);
+	turn_off_led();
 	delay(500);
+}
+
+void turn_off_led(){
+	digitalWrite(LED_BUILTIN, LOW);
 }
