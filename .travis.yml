@@ -40,4 +40,4 @@ install:
 script:
   - mkdir upload
   - platformio run
-  - cp .pioenvs/nodemcuv2/firmware.bin upload/latest.bin
+#  - cp .pioenvs/nodemcuv2/firmware.bin upload/latest.bin
