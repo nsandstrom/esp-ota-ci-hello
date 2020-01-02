@@ -11,6 +11,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: download platformio
       run: |
+        sudo apt-get update
         pip install -U platformio
         platformio update
 
