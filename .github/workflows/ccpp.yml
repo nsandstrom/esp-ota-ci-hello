@@ -16,4 +16,6 @@ jobs:
         export PATH=$PATH:~/.platformio/penv/bin
 
     - name: make
-      run: python --version
+      run: |
+        python --version
+        platformio boards Espressif 8266
