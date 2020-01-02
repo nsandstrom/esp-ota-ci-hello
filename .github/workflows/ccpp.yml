@@ -13,13 +13,12 @@ jobs:
       run: |
         sudo apt-get update
         pip install -U platformio
-        export PATH=$PATH:~/.platformio/penv/bin
+        #export PATH=$PATH:~/.platformio/penv/bin
 
     - name: make
       run: |
         python --version
         ls -a
-        cat platformio.ini
         cd src
         ls -a
         platformio run
