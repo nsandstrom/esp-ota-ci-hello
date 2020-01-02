@@ -21,3 +21,4 @@ jobs:
         ls -a
         cd src
         ls -a
+        platformio run
