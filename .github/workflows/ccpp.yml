@@ -19,3 +19,5 @@ jobs:
       run: |
         python --version
         ls -a
+        cd src
+        ls -a
