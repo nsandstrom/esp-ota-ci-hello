@@ -13,7 +13,7 @@ jobs:
       run: |
         sudo apt-get update
         pip install -U platformio
-        platformio update
+        export PATH=$PATH:~/.platformio/penv/bin
 
     - name: make
       run: python --version
