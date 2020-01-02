@@ -19,6 +19,7 @@ jobs:
       run: |
         python --version
         ls -a
+        cat platformio.ini
         cd src
         ls -a
         platformio run
