@@ -12,6 +12,7 @@ jobs:
     - name: download platformio
       run: |
         sudo apt-get update
+        ~/.platformio
         pip install -U platformio
         #export PATH=$PATH:~/.platformio/penv/bin
 
