@@ -9,5 +9,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: download platformio
+      run: - pip install -U platformio
+      run: - platformio update
+
     - name: make
       run: python --version
