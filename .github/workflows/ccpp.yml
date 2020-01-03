@@ -11,9 +11,10 @@ jobs:
     - uses: actions/checkout@v1
     - name: Docker pull
       run: |
-        docker pull jumperio/vlab-gcc-arm
-        docker run --rm -v $PWD:/my_files_in_docker --entrypoint /usr/bin/make jumperio/vlab-gcc-arm -C my_files_in_docker
-        docker info
+        docker pull chankinou/platformio-esp
+        docker run ls
+        docker run --rm -v $PWD:/my_files_in_docker --entrypoint /usr/bin/make chankinou/platformio-esp -C my_files_in_docker
+        docker run ls
     - name: make
       run: make
 
