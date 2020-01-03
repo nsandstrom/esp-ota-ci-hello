@@ -1,0 +1,19 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Docker pull
+      run: |
+        docker pull jumperio/vlab-gcc-arm
+        docker run --rm -v $PWD:/my_files_in_docker --entrypoint /usr/bin/make jumperio/vlab-gcc-arm -C my_files_in_docker
+        docker info
+    - name: make
+      run: make
+
