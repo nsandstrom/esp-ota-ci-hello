@@ -12,5 +12,5 @@ jobs:
     - name: Docker pull
       run: |
         docker pull chankinou/platformio-esp
-        docker run --rm -v $PWD:/my_files_in_docker --entrypoint /usr/bin/make chankinou/platformio-esp -C my_files_in_docker
+        docker run --rm -v $PWD:/my_files_in_docker --entrypoint platformio run chankinou/platformio-esp -C my_files_in_docker
 
