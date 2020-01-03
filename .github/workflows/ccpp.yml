@@ -21,7 +21,7 @@ jobs:
     - name: Test with pytest
       run: |
         python --version
-        platformio lib search mqtt
+        platformio lib -g install  https://github.com/knolleary/pubsubclient/archive/master.zip
         platformio run
         cd .pio/build/nodemcuv2
         ls -ltr
