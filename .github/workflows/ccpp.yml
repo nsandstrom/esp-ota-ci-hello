@@ -21,7 +21,7 @@ jobs:
     - name: Test with pytest
       run: |
         python --version
-        platformio lib builtin --storage
+        platformio lib search mqtt
         platformio run
         cd .pio/build/nodemcuv2
         ls -ltr
