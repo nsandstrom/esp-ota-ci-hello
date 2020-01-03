@@ -21,7 +21,7 @@ jobs:
     - name: Test with pytest
       run: |
         python --version
-        platformio lib builtin framework-arduinoespressif8266
+        platformio lib builtin -h
         platformio run
         cd .pio/build/nodemcuv2
         ls -ltr
