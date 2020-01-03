@@ -9,8 +9,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Docker pull
+    - name: Python
       run: |
-        docker pull chankinou/platformio-esp
-        docker run --rm -v $PWD:/my_files_in_docker --entrypoint date chankinou/platformio-esp -C my_files_in_docker
+        python --version
+        ls -ltr
+        date
 
